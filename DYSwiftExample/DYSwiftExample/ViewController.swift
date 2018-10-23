@@ -15,31 +15,38 @@ class ViewController: UIViewController,DYDelegateProtocol,DYRecommendationsDeleg
 
     let DY_SECRET_KEY : String = YOUR_SECTION_SECRET_KEY
     let DY_WIDGET_ID : String = YOUR_WIDGET_ID
-    
+    let DY_CONTEXT : DYPageContext = DYPageContext.init();
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //Init DYSDK
         DYApi.getInstance().setSecretKey(DY_SECRET_KEY);
         DYApi.getInstance().setDelegate(self);
+        
+        DY_CONTEXT.type = DY_TYPE_HOMEPAGE;
+        
+
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        DYApi.getInstance().pageView("HomePage", context: DY_CONTEXT);
+    }
+    
     //DY ready delegate Method
     func experimentsReady(with state: ExperimentsState) {
         
-        let DYContext = DYPageContext.init();
-        DYContext.type = DY_TYPE_HOMEPAGE;
         
-        DYApi.getInstance().pageView("HomePage", context: DYContext);
         
         if (state == DY_READY_LOCAL_CACHE){
             //first call from local cache
-            DYApi.getInstance().sendRecommendationRequest(DY_WIDGET_ID, with: DYContext, itemsIDsOnly: false, andDelegate: self);
+            DYApi.getInstance().sendRecommendationRequest(DY_WIDGET_ID, with: DY_CONTEXT, itemsIDsOnly: false, andDelegate: self);
         }
         
         if (state == DY_READY_AND_UPDATED){
             //update the data if necessary
-            DYApi.getInstance().sendRecommendationRequest(DY_WIDGET_ID, with: DYContext, itemsIDsOnly: false, andDelegate: self);
+            DYApi.getInstance().sendRecommendationRequest(DY_WIDGET_ID, with: DY_CONTEXT, itemsIDsOnly: false, andDelegate: self);
         }
         
         if (state == DY_READY_NO_UPDATE_NEEDED){
