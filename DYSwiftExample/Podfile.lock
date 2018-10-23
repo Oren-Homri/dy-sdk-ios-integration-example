@@ -1,0 +1,16 @@
+PODS:
+  - Dynamic-Yield-iOS-SDK (3.2.3)
+
+DEPENDENCIES:
+  - Dynamic-Yield-iOS-SDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Dynamic-Yield-iOS-SDK
+
+SPEC CHECKSUMS:
+  Dynamic-Yield-iOS-SDK: a6e36e21ade003332e65b83c48d0638c415ebc8b
+
+PODFILE CHECKSUM: 2a2df172665d8e1189a7459e85a6dca9aed4ea4b
+
+COCOAPODS: 1.5.3
