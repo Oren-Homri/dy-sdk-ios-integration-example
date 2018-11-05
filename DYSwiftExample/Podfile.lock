@@ -1,16 +1,24 @@
 PODS:
-  - Dynamic-Yield-iOS-SDK (3.2.3)
+  - BButton (4.0.2)
+  - Dynamic-Yield-iOS-SDK (3.2.4)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - BButton
   - Dynamic-Yield-iOS-SDK
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BButton
     - Dynamic-Yield-iOS-SDK
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Dynamic-Yield-iOS-SDK: a6e36e21ade003332e65b83c48d0638c415ebc8b
+  BButton: ab0f2ed3b998ae73c5188b57d270d81e4a1eeb27
+  Dynamic-Yield-iOS-SDK: 207be3bf3824754f2f3eea69ca44bf42fd5a7733
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 2a2df172665d8e1189a7459e85a6dca9aed4ea4b
+PODFILE CHECKSUM: ecb51cadb4e6b0809e8385c567aefe913818e678
 
 COCOAPODS: 1.5.3

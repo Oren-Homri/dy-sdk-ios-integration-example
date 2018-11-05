@@ -32,6 +32,6 @@ typedef enum {
 @property contextType type;
 
 -(NSDictionary* _Nonnull)getAsDictinary;
--(NSString* _Nonnull)convertDYContextTypeToString:(contextType)context;
+-(NSString* _Nonnull)convertDYContextTypeToString;
 -(contextType)convertStringToDYContextType:(NSString* _Nonnull)context;
 @end

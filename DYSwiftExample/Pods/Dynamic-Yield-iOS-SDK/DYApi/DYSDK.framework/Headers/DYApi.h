@@ -119,7 +119,7 @@
  * @return the value of the smartVariable
  */
 
--(id _Nonnull)getSmartVariable:(NSString* _Nonnull)varName defaultValue:(id _Nonnull)defaultValue;
+-(id _Nonnull)getSmartVariable:(NSString* _Nonnull)varName defaultValue:(id _Nullable)defaultValue;
 
 /*!
  *  Selects an HTML variation from the defined smart object and then assigns it

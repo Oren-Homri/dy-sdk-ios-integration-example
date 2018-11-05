@@ -7,5 +7,7 @@ target 'DYSwiftExample' do
 
   # Pods for DYSwiftExample
   pod 'Dynamic-Yield-iOS-SDK'
+  pod 'BButton'
+  pod 'SVProgressHUD'
 
 end

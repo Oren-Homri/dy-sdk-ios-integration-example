@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Dynamic Content-->
+        <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="9pv-A4-QxB" customClass="DynamicContentController" customModule="DYSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HS3-dV-NJD">
+                                <rect key="frame" x="19" y="99" width="337.5" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPq-GX-EgF" customClass="BButton">
+                                <rect key="frame" x="19" y="30" width="337.5" height="33.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Load Image Smart Object">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadSmartObjectToImageView:" destination="9pv-A4-QxB" eventType="touchUpInside" id="VVo-bO-UUS"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khc-hq-VAq">
+                                <rect key="frame" x="19" y="383" width="337.5" height="200"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="887-Dh-aaC" customClass="BButton">
+                                <rect key="frame" x="19" y="340" width="337.5" height="33.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Load Web Smart Object"/>
+                                <connections>
+                                    <action selector="loadSmartObjectToWebView:" destination="9pv-A4-QxB" eventType="touchUpInside" id="gdj-xL-f8o"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="HS3-dV-NJD" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="79" id="9jP-4U-gPQ"/>
+                            <constraint firstItem="cPq-GX-EgF" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.9" id="AYp-Ob-JZ2"/>
+                            <constraint firstItem="887-Dh-aaC" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.9" id="DyO-y7-yuP"/>
+                            <constraint firstItem="HS3-dV-NJD" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="GXK-PE-9mJ"/>
+                            <constraint firstItem="cPq-GX-EgF" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.05" id="O3U-OF-eva"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="khc-hq-VAq" secondAttribute="bottom" constant="35" id="PyR-7g-Jho"/>
+                            <constraint firstItem="khc-hq-VAq" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.3" id="b7A-Vh-P0Y"/>
+                            <constraint firstItem="khc-hq-VAq" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.9" id="bgm-Kb-7sZ"/>
+                            <constraint firstItem="HS3-dV-NJD" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.9" id="cAy-bc-Rrb"/>
+                            <constraint firstItem="cPq-GX-EgF" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="10" id="mDz-K9-B7m"/>
+                            <constraint firstItem="khc-hq-VAq" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="oUU-iP-3LC"/>
+                            <constraint firstItem="887-Dh-aaC" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="qhR-vf-db8"/>
+                            <constraint firstItem="HS3-dV-NJD" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.3" id="sri-ku-TGN"/>
+                            <constraint firstItem="887-Dh-aaC" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="320" id="vvI-gB-x35"/>
+                            <constraint firstItem="887-Dh-aaC" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.05" id="weo-O9-tUR"/>
+                            <constraint firstItem="cPq-GX-EgF" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="whL-fn-NmU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Dynamic Content" id="acW-dT-cKf">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="mImageButton" destination="cPq-GX-EgF" id="GYv-q0-7jF"/>
+                        <outlet property="mImageView" destination="HS3-dV-NJD" id="Blq-Ap-PZA"/>
+                        <outlet property="mWebButton" destination="887-Dh-aaC" id="oow-1d-djc"/>
+                        <outlet property="mWebView" destination="khc-hq-VAq" id="gqy-ge-1KA"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Recommendation-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="RCOMController" customModule="DYSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAk-EZ-Snp">
+                                <rect key="frame" x="19" y="382" width="337.5" height="200"/>
+                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fG5-D3-7OI">
+                                <rect key="frame" x="19" y="174" width="337.5" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY2-QW-1Zo" customClass="BButton">
+                                <rect key="frame" x="19" y="26" width="337.5" height="33.5"/>
+                                <state key="normal" title="Get Recommendation"/>
+                                <connections>
+                                    <action selector="rcomButtonClicked:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Yhc-91-x4Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="WAk-EZ-Snp" secondAttribute="bottom" constant="36" id="3rz-yv-Ij5"/>
+                            <constraint firstItem="fG5-D3-7OI" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="Ag8-12-TQD"/>
+                            <constraint firstItem="WAk-EZ-Snp" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.3" id="FlT-K2-ZVc"/>
+                            <constraint firstItem="LY2-QW-1Zo" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="Npf-83-5pZ"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="fG5-D3-7OI" secondAttribute="bottom" constant="244" id="Tec-Et-T9B"/>
+                            <constraint firstItem="WAk-EZ-Snp" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="WDT-Aw-kNG"/>
+                            <constraint firstItem="LY2-QW-1Zo" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.9" id="bWx-8g-JEz"/>
+                            <constraint firstItem="WAk-EZ-Snp" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.9" id="caA-NF-mCc"/>
+                            <constraint firstItem="fG5-D3-7OI" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.3" id="d6J-us-ZbQ"/>
+                            <constraint firstItem="LY2-QW-1Zo" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.05" id="hOc-AF-wXv"/>
+                            <constraint firstItem="LY2-QW-1Zo" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="6" id="pPq-pZ-RzV"/>
+                            <constraint firstItem="fG5-D3-7OI" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.9" id="udL-oW-rNx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recommendation" id="cPa-gy-q4n">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="mScrollView" destination="WAk-EZ-Snp" id="umI-ZX-7gF"/>
+                        <outlet property="mTextView" destination="fG5-D3-7OI" id="HmB-SZ-cs0"/>
+                        <outlet property="mloadRcomButton" destination="LY2-QW-1Zo" id="L6c-OU-CPe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
 </document>
