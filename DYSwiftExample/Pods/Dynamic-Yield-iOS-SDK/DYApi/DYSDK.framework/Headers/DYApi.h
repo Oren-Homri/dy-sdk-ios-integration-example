@@ -228,6 +228,19 @@
 -(BOOL)setEvaluator:(NSString* _Nonnull)evaluatorID forParams:(NSArray* _Nonnull)params saveBetweenSessions:(BOOL)save;
 
 /*!
+ *  Sets the Evaluator value
+ *
+ *  @param evaluatorID - the ID (not display name) of the evaluator
+ *  @param params - the value of the evaluator
+ *  @param save - Yes to save evaluator between sessions, No otherwise
+ *  @param completionHandler - Code to be excuted when the evaluator is set
+ *
+ *  @return Yes if evaluatorID is not nil or empty
+ */
+-(BOOL)setEvaluator:(NSString* _Nonnull)evaluatorID forParams:(NSArray* _Nonnull)params saveBetweenSessions:(BOOL)save completion:(void(^)(void))completionHandler;
+
+
+/*!
  * Activates developer mode enabling advanced
  * logging and debugging of the content and flow
  *

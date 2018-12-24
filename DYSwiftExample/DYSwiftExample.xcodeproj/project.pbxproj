@@ -15,7 +15,48 @@
 		6B13E159218F426500E9FD55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B13E158218F426500E9FD55 /* Assets.xcassets */; };
 		6B13E15C218F426500E9FD55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B13E15A218F426500E9FD55 /* LaunchScreen.storyboard */; };
 		6B13E164218F439800E9FD55 /* DYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B13E163218F439800E9FD55 /* DYBaseViewController.swift */; };
+		6BEA15AA21C9186400388798 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEA15A921C9186400388798 /* UserNotifications.framework */; };
+		6BEA15AC21C9186400388798 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEA15AB21C9186400388798 /* UserNotificationsUI.framework */; };
+		6BEA15AF21C9186400388798 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA15AE21C9186400388798 /* NotificationViewController.swift */; };
+		6BEA15B221C9186400388798 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA15B021C9186400388798 /* MainInterface.storyboard */; };
+		6BEA15B621C9186400388798 /* DYContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6BEA15A821C9186400388798 /* DYContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6BEA15C221C9188A00388798 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA15C121C9188A00388798 /* NotificationService.swift */; };
+		6BEA15C621C9188A00388798 /* DYServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6BEA15BF21C9188A00388798 /* DYServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6BEA15CC21C9191700388798 /* DYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEA15CB21C9191700388798 /* DYSDK.framework */; };
+		6BEA15CD21C9192200388798 /* DYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEA15CB21C9191700388798 /* DYSDK.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BEA15B421C9186400388798 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B13E144218F426500E9FD55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BEA15A721C9186400388798;
+			remoteInfo = DYContentExtension;
+		};
+		6BEA15C421C9188A00388798 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B13E144218F426500E9FD55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BEA15BE21C9188A00388798;
+			remoteInfo = DYServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6BEA15BA21C9186400388798 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6BEA15B621C9186400388798 /* DYContentExtension.appex in Embed App Extensions */,
+				6BEA15C621C9188A00388798 /* DYServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18D3E20D3C73C905F6C716E5 /* Pods-DYSwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYSwiftExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYSwiftExample/Pods-DYSwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -28,6 +69,17 @@
 		6B13E15B218F426500E9FD55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B13E15D218F426500E9FD55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B13E163218F439800E9FD55 /* DYBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYBaseViewController.swift; sourceTree = "<group>"; };
+		6BEA15A821C9186400388798 /* DYContentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DYContentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BEA15A921C9186400388798 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		6BEA15AB21C9186400388798 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		6BEA15AE21C9186400388798 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		6BEA15B121C9186400388798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		6BEA15B321C9186400388798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BEA15BF21C9188A00388798 /* DYServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DYServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BEA15C121C9188A00388798 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		6BEA15C321C9188A00388798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BEA15CA21C918BB00388798 /* DYSwiftExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DYSwiftExample.entitlements; sourceTree = "<group>"; };
+		6BEA15CB21C9191700388798 /* DYSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DYSDK.framework; path = "Pods/Dynamic-Yield-iOS-SDK/DYApi/DYSDK.framework"; sourceTree = "<group>"; };
 		B64E6C2BE2E6C87F83D16EF1 /* Pods_DYSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYSwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D13FE3C2AED552EA0E59A9 /* Pods-DYSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYSwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYSwiftExample/Pods-DYSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,13 +93,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6BEA15A521C9186400388798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BEA15CC21C9191700388798 /* DYSDK.framework in Frameworks */,
+				6BEA15AC21C9186400388798 /* UserNotificationsUI.framework in Frameworks */,
+				6BEA15AA21C9186400388798 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BEA15BC21C9188A00388798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BEA15CD21C9192200388798 /* DYSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2301573838F5F18366A584D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BEA15CB21C9191700388798 /* DYSDK.framework */,
 				B64E6C2BE2E6C87F83D16EF1 /* Pods_DYSwiftExample.framework */,
+				6BEA15A921C9186400388798 /* UserNotifications.framework */,
+				6BEA15AB21C9186400388798 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -56,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				6B13E14E218F426500E9FD55 /* DYSwiftExample */,
+				6BEA15AD21C9186400388798 /* DYContentExtension */,
+				6BEA15C021C9188A00388798 /* DYServiceExtension */,
 				6B13E14D218F426500E9FD55 /* Products */,
 				AF39D0EF8BD3C1DE3B5E5044 /* Pods */,
 				2301573838F5F18366A584D4 /* Frameworks */,
@@ -66,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				6B13E14C218F426500E9FD55 /* DYSwiftExample.app */,
+				6BEA15A821C9186400388798 /* DYContentExtension.appex */,
+				6BEA15BF21C9188A00388798 /* DYServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +150,7 @@
 		6B13E14E218F426500E9FD55 /* DYSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				6BEA15CA21C918BB00388798 /* DYSwiftExample.entitlements */,
 				6B13E14F218F426500E9FD55 /* AppDelegate.swift */,
 				6B13E163218F439800E9FD55 /* DYBaseViewController.swift */,
 				6B13E151218F426500E9FD55 /* DynamicContentController.swift */,
@@ -83,6 +161,25 @@
 				6B13E15D218F426500E9FD55 /* Info.plist */,
 			);
 			path = DYSwiftExample;
+			sourceTree = "<group>";
+		};
+		6BEA15AD21C9186400388798 /* DYContentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6BEA15AE21C9186400388798 /* NotificationViewController.swift */,
+				6BEA15B021C9186400388798 /* MainInterface.storyboard */,
+				6BEA15B321C9186400388798 /* Info.plist */,
+			);
+			path = DYContentExtension;
+			sourceTree = "<group>";
+		};
+		6BEA15C021C9188A00388798 /* DYServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6BEA15C121C9188A00388798 /* NotificationService.swift */,
+				6BEA15C321C9188A00388798 /* Info.plist */,
+			);
+			path = DYServiceExtension;
 			sourceTree = "<group>";
 		};
 		AF39D0EF8BD3C1DE3B5E5044 /* Pods */ = {
@@ -106,15 +203,52 @@
 				6B13E149218F426500E9FD55 /* Frameworks */,
 				6B13E14A218F426500E9FD55 /* Resources */,
 				AC9663909CDFA53953DD421C /* [CP] Embed Pods Frameworks */,
+				6BEA15BA21C9186400388798 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6BEA15B521C9186400388798 /* PBXTargetDependency */,
+				6BEA15C521C9188A00388798 /* PBXTargetDependency */,
 			);
 			name = DYSwiftExample;
 			productName = DYSwiftExample;
 			productReference = 6B13E14C218F426500E9FD55 /* DYSwiftExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6BEA15A721C9186400388798 /* DYContentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BEA15B921C9186400388798 /* Build configuration list for PBXNativeTarget "DYContentExtension" */;
+			buildPhases = (
+				6BEA15A421C9186400388798 /* Sources */,
+				6BEA15A521C9186400388798 /* Frameworks */,
+				6BEA15A621C9186400388798 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DYContentExtension;
+			productName = DYContentExtension;
+			productReference = 6BEA15A821C9186400388798 /* DYContentExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		6BEA15BE21C9188A00388798 /* DYServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BEA15C721C9188A00388798 /* Build configuration list for PBXNativeTarget "DYServiceExtension" */;
+			buildPhases = (
+				6BEA15BB21C9188A00388798 /* Sources */,
+				6BEA15BC21C9188A00388798 /* Frameworks */,
+				6BEA15BD21C9188A00388798 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DYServiceExtension;
+			productName = DYServiceExtension;
+			productReference = 6BEA15BF21C9188A00388798 /* DYServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -127,6 +261,17 @@
 				ORGANIZATIONNAME = "Dynamic Yield";
 				TargetAttributes = {
 					6B13E14B218F426500E9FD55 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					6BEA15A721C9186400388798 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					6BEA15BE21C9188A00388798 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -145,6 +290,8 @@
 			projectRoot = "";
 			targets = (
 				6B13E14B218F426500E9FD55 /* DYSwiftExample */,
+				6BEA15A721C9186400388798 /* DYContentExtension */,
+				6BEA15BE21C9188A00388798 /* DYServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +304,21 @@
 				6B13E15C218F426500E9FD55 /* LaunchScreen.storyboard in Resources */,
 				6B13E159218F426500E9FD55 /* Assets.xcassets in Resources */,
 				6B13E157218F426500E9FD55 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BEA15A621C9186400388798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BEA15B221C9186400388798 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BEA15BD21C9188A00388798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +379,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6BEA15A421C9186400388798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BEA15AF21C9186400388798 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BEA15BB21C9188A00388798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BEA15C221C9188A00388798 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BEA15B521C9186400388798 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BEA15A721C9186400388798 /* DYContentExtension */;
+			targetProxy = 6BEA15B421C9186400388798 /* PBXContainerItemProxy */;
+		};
+		6BEA15C521C9188A00388798 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BEA15BE21C9188A00388798 /* DYServiceExtension */;
+			targetProxy = 6BEA15C421C9188A00388798 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6B13E155218F426500E9FD55 /* Main.storyboard */ = {
@@ -234,6 +425,14 @@
 				6B13E15B218F426500E9FD55 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6BEA15B021C9186400388798 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BEA15B121C9186400388798 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -359,13 +558,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18D3E20D3C73C905F6C716E5 /* Pods-DYSwiftExample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DYSwiftExample/DYSwiftExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MXDK3E2B7J;
 				INFOPLIST_FILE = DYSwiftExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynamicyield.DYSwiftExample;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynamicyield.dyswift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -376,14 +580,123 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2D13FE3C2AED552EA0E59A9 /* Pods-DYSwiftExample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DYSwiftExample/DYSwiftExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MXDK3E2B7J;
 				INFOPLIST_FILE = DYSwiftExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynamicyield.DYSwiftExample;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynamicyield.dyswift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6BEA15B721C9186400388798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MXDK3E2B7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Dynamic-Yield-iOS-SDK/DYApi",
+				);
+				INFOPLIST_FILE = DYContentExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynamicyield.dyswift.DYContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6BEA15B821C9186400388798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MXDK3E2B7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Dynamic-Yield-iOS-SDK/DYApi",
+				);
+				INFOPLIST_FILE = DYContentExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynamicyield.dyswift.DYContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6BEA15C821C9188A00388798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MXDK3E2B7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Dynamic-Yield-iOS-SDK/DYApi",
+				);
+				INFOPLIST_FILE = DYServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynamicyield.dyswift.DYServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6BEA15C921C9188A00388798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MXDK3E2B7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Dynamic-Yield-iOS-SDK/DYApi",
+				);
+				INFOPLIST_FILE = DYServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynamicyield.dyswift.DYServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -406,6 +719,24 @@
 			buildConfigurations = (
 				6B13E161218F426500E9FD55 /* Debug */,
 				6B13E162218F426500E9FD55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BEA15B921C9186400388798 /* Build configuration list for PBXNativeTarget "DYContentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BEA15B721C9186400388798 /* Debug */,
+				6BEA15B821C9186400388798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BEA15C721C9188A00388798 /* Build configuration list for PBXNativeTarget "DYServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BEA15C821C9188A00388798 /* Debug */,
+				6BEA15C921C9188A00388798 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

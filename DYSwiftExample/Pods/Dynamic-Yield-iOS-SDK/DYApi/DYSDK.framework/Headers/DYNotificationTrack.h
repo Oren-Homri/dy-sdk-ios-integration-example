@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import "DYLogger.h"
+#import <UserNotificationsUI/UserNotificationsUI.h>
 
 typedef enum {
     DY_IMP,
@@ -17,6 +17,8 @@ typedef enum {
 @interface DYNotificationTrack : NSObject
 
 +(void)trackDelivered:(NSDictionary*)userInfo;
++(void)trackClicked:(NSDictionary*)userInfo openAction:(NSString*)DYActionLink dismiss:(UNNotificationContentExtensionResponseOption)dismiss completionHandler:(void (^)(UNNotificationContentExtensionResponseOption option))completion API_AVAILABLE(ios(10.0));
 +(void)trackClicked:(NSDictionary*)userInfo;
-
++(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
 @end

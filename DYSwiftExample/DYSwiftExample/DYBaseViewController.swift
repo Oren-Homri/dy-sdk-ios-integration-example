@@ -18,7 +18,7 @@ class DYBaseViewController: UIViewController,DYDelegateProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DYApi.getInstance().registerForPushNotifications()
     }
     
     override func viewDidAppear(_ animated: Bool) {

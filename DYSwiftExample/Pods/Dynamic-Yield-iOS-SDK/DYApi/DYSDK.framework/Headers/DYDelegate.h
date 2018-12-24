@@ -84,10 +84,26 @@ typedef enum {
  
  *  @param smartActionID - The Smart Action ID as maintained in the Dynamic Yield Admin Console
  *  @param smartActionData - The variation data as maintained in the Dynamic Yield Admin Console;
+ *  @param view - The overlay's view 
+ * this can be either the Messaging Overlay HTML or the Custom Action JSON.
+ */
+
+-(void)onSmartAction:(NSString* _Nonnull)smartActionID returned:(NSDictionary* _Nonnull)smartActionData onView:(UIView*)view;
+
+/*!
+ *  This method is called after an Overlay or Custom Action has been triggered and a variation has
+ * been selected by Dynamic Yield.  For Custom Actions the implementation of the method should
+ * include the desired app manipulation based on the JSON data returned.  For Overlays where
+ * ‘shouldDYRender’ was set to ‘false’, this method allows manipulation and
+ * custom rendering 8 based on the HTML data returned by Dynamic Yield.
+ 
+ *  @param smartActionID - The Smart Action ID as maintained in the Dynamic Yield Admin Console
+ *  @param smartActionData - The variation data as maintained in the Dynamic Yield Admin Console;
  * this can be either the Messaging Overlay HTML or the Custom Action JSON.
  */
 
 -(void)onSmartAction:(NSString* _Nonnull)smartActionID returned:(NSDictionary* _Nonnull)smartActionData;
+
 
 /*!
  *  This method is called just before the HTML Overlay content is rendered
